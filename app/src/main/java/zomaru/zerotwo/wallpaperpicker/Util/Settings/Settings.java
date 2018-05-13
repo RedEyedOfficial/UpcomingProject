@@ -65,42 +65,14 @@ public class Settings extends PreferenceActivity {
                         THEMEVALUE = 3;
                         break;
                     case 3:
-                        if (Build.VERSION.SDK_INT < 24) {
-                            final AlertDialog alertDialog = new AlertDialog.Builder(Settings.this).create();
-                            alertDialog.setTitle(getApplicationContext().getResources().getString(R.string.warning));
-                            alertDialog.setMessage(getApplicationContext().getResources().getString(R.string.theme_message) + oslevel + System.lineSeparator() + getApplicationContext().getResources().getString(R.string.theme_messages));
-                            alertDialog.setCancelable(false);
-                            alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, "OK :(", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-                                    alertDialog.dismiss();
-                                }
-                            });
-                            alertDialog.show();
-                        } else {
-                            zerotwoApply();
-                            listPreference.setSummary("Tema saat ini adalah: " + listPreference.getEntries()[theme]);
-                            THEMEVALUE = 4;
-                        }
+                        zerotwoApply();
+                        listPreference.setSummary("Tema saat ini adalah: " + listPreference.getEntries()[theme]);
+                        THEMEVALUE = 4;
                         break;
                     case 4:
-                        if (Build.VERSION.SDK_INT < 24) {
-                            final AlertDialog alertDialog = new AlertDialog.Builder(Settings.this).create();
-                            alertDialog.setTitle(getApplicationContext().getResources().getString(R.string.warning));
-                            alertDialog.setMessage(getApplicationContext().getResources().getString(R.string.theme_message) + oslevel + System.lineSeparator() + getApplicationContext().getResources().getString(R.string.theme_messages));
-                            alertDialog.setCancelable(false);
-                            alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, "OK :(", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-                                    alertDialog.dismiss();
-                                }
-                            });
-                            alertDialog.show();
-                        } else {
-                            akameApply();
-                            listPreference.setSummary("Tema saat ini adalah: " + listPreference.getEntries()[theme]);
-                            THEMEVALUE = 5;
-                        }
+                        akameApply();
+                        listPreference.setSummary("Tema saat ini adalah: " + listPreference.getEntries()[theme]);
+                        THEMEVALUE = 5;
                         break;
                 }
                 return true;
