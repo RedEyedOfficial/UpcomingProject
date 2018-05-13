@@ -1,5 +1,6 @@
 package zomaru.zerotwo.wallpaperpicker.WallPaperPicker;
 
+import android.app.DownloadManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -31,6 +32,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.nostra13.universalimageloader.utils.StorageUtils;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -48,17 +50,10 @@ import zomaru.zerotwo.wallpaperpicker.R;
 public class WallPaperPicker extends AppCompatActivity {
     public static final String ZERO_TWO_IS_THE_BEST_GIRL = "WallPaperPicker.ZERO_TWO";
     private static final String DIREKTORI = "/ZeroTwoWallpaper/";
-    private final String filename = "Zero Two.jpg";
     private Context context;
-    private int width;
-    private int height;
 
     @BindView(R.id.image_wp)
     ImageView imageView;
-    @BindView(R.id.download_process)
-    ProgressBar progressBar;
-    @BindView(R.id.download_procentage)
-    TextView textView;
 
     @Override
     protected void onCreate (Bundle savedInstanceState) {
@@ -66,15 +61,6 @@ public class WallPaperPicker extends AppCompatActivity {
         setContentView(R.layout.detail_wp);
         ButterKnife.bind(this);
         context = getApplicationContext();
-        OkHttpClient okHttpClient = new OkHttpClient() .newBuilder()
-                .addNetworkInterceptor(new HttpLoggingInterceptor())
-                .build();
-        AndroidNetworking.initialize(context,okHttpClient);
-        Point size = new Point();
-        this.getWindowManager().getDefaultDisplay().getRealSize(size);
-        width = size.x;
-        height = size.y;
-        File cacheDir = StorageUtils.getCacheDirectory(context);
         Image image = getIntent().getParcelableExtra(ZERO_TWO_IS_THE_BEST_GIRL);
 
         Glide.with(this).load(image.getLink()).asBitmap().error(R.drawable.ic_bug_report).diskCacheStrategy(DiskCacheStrategy.ALL).into(imageView);
@@ -99,71 +85,10 @@ public class WallPaperPicker extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.save_image) {
-            try {
-                imageView = (ImageView) findViewById(R.id.image_wp);
-                Image image = getIntent().getParcelableExtra(ZERO_TWO_IS_THE_BEST_GIRL);
-                final String string = image.getLink();
-                final String namafile = image.getName();
-                File folder = new File(context.getFilesDir() + File.separator + "/Zero Two Wallpaper/");
-                boolean success = true;
-                if (!folder.exists()) {
-                    success = folder.mkdirs();
-                }
-                if (success) {
-                    Toast toast = Toast.makeText(WallPaperPicker.this, "folder baru dibuat", Toast.LENGTH_SHORT);
-                    toast.show();
-                } else {
-                    Toast toast = Toast.makeText(WallPaperPicker.this, "folder baru tidak dibuat", Toast.LENGTH_SHORT);
-                    toast.show();
-                }
-                final File gambar = File.createTempFile("Zero Two", ".jpg");
-                File file = new File(folder, namafile);
-                final FileOutputStream outputStream = new FileOutputStream(file);
-
-                AndroidNetworking.download(string, context.getFilesDir().getAbsolutePath(), namafile).setTag("Download").setPriority(Priority.HIGH).build().setDownloadProgressListener(new DownloadProgressListener() {
-                    private int prosentase;
-
-                    @Override
-                    public void onProgress(long bytesDownloaded, long totalBytes) {
-                        final int progress = (int) (bytesDownloaded * 100 / totalBytes);
-                        if (progress != prosentase) {
-                            try {
-                                Toast toast = Toast.makeText(WallPaperPicker.this, getApplicationContext().getResources().getString(R.string.downloading), Toast.LENGTH_LONG);
-                                toast.show();
-                                progressBar.setProgress(progress);
-                                textView.setText("Mendownload.." + progress + " %");
-                                outputStream.write(namafile.getBytes());
-                                outputStream.flush();
-                                outputStream.close();
-                                prosentase = progress;
-                            } catch (IOException a) {
-                                a.printStackTrace();
-                            }
-                        }
-
-                    }
-                }).startDownload(new DownloadListener() {
-                    @Override
-                    public void onDownloadComplete() {
-                        progressBar.setProgress(100);
-                        Toast toast = Toast.makeText(WallPaperPicker.this, getApplicationContext().getResources().getString(R.string.download_finish), Toast.LENGTH_LONG);
-                        toast.show();
-                    }
-
-                    @Override
-                    public void onError(ANError anError) {
-                        progressBar.setVisibility(View.GONE);
-                        progressBar.setProgress(0);
-                        Toast toast = Toast.makeText(WallPaperPicker.this, getApplicationContext().getResources().getString(R.string.download_error), Toast.LENGTH_LONG);
-                        toast.show();
-                    }
-                });
-                progressBar.setProgress(0);
-                progressBar.setVisibility(View.VISIBLE);
-            } catch (IOException a) {
-                a.printStackTrace();
-            }
-        }   return super.onOptionsItemSelected(item);
+                donwloadThis();
+            Toast toast = Toast.makeText(context, "Gambar akan disimpan di penyimpanan internal pada folder pictures ya darling?", Toast.LENGTH_LONG);
+            toast.show();
+        }return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -179,5 +104,27 @@ public class WallPaperPicker extends AppCompatActivity {
                 }
             }
         }
+    }
+
+    private  void donwloadThis() {
+        Image image = getIntent().getParcelableExtra(ZERO_TWO_IS_THE_BEST_GIRL);
+        String link = image.getLink();
+        String name = image.getName();
+        File imageOnSD = new File(Environment.getExternalStorageDirectory()+ "/Zero Two Wallpaper");
+        File imageOnInternal = new File(Environment.DIRECTORY_PICTURES);
+        boolean mkdir = imageOnSD.exists() & imageOnInternal.exists();
+        if (!mkdir) {
+            imageOnSD.mkdirs();
+            imageOnInternal.mkdirs();
+        }
+        DownloadManager manager = (DownloadManager)getApplication().getSystemService(Context.DOWNLOAD_SERVICE);
+        Uri download = Uri.parse(link);
+        DownloadManager.Request request = new DownloadManager.Request(download);
+        request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_MOBILE | DownloadManager.Request.NETWORK_WIFI)
+                .setAllowedOverRoaming(false)
+                .setTitle("Downloading..")
+                .setDestinationInExternalPublicDir(Environment.DIRECTORY_PICTURES, name)
+                .setDescription("Sabar ya darling.. lagi download nih..");
+        manager.enqueue(request);
     }
 }
