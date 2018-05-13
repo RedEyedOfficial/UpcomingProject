@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:title="@string/about">
+            <menu>
+        <item
+            android:id="@+id/app_version_drw"
+            android:icon="@drawable/ic_about_app"
+            android:title="@string/about_app"
+            android:iconTint="@color/tint"/>
+        <item
+            android:id="@+id/about_zero_two"
+            android:icon="@drawable/ic_lovable"
+            android:title="@string/about_zero_two" />
+        <item
+            android:id="@+id/trivia"
+            android:icon="@drawable/ic_trivia"
+            android:title="@string/trivia"
+            android:iconTint="@color/tint"/>
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/settings"
+            android:iconTint="@color/tint"/>
+        </menu>
+        </item>
+    </group>
+
+    <item android:title="@string/supports">
+        <menu>
+            <item
+                android:id="@+id/bug_report"
+                android:icon="@drawable/ic_bug_report"
+                android:title="@string/bug_report"
+                android:iconTint="@color/tint"/>
+            <item
+                android:id="@+id/github"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/github_page"
+                android:iconTint="@color/tint"/>
+            <item
+                android:id="@+id/facebook"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/facebook_page"
+                android:iconTint="@color/tint"/>
+            <item
+                android:id="@+id/osl"
+                android:icon="@drawable/ic_open_source"
+                android:title="@string/open_source"
+                android:iconTint="@color/tint"/>
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="zomaru.zerotwo.wallpaperpicker">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/z2light"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/z2light"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AboutApp.AboutApp"
+            android:label="Tentang Aplikasi"
+            />
+        <activity android:name=".Util.Settings.Settings"
+            android:label="@string/preference_category_s" />
+        <activity android:name=".BugReport.BugReport"
+            android:label="@string/bug_report" />
+        <activity android:name=".Trivia.Trivia"
+            android:label="@string/trivia" />
+        <activity android:name=".AboutZeroTwo.AboutHer"
+            android:label="@string/about_zero_two" />
+        <activity android:name=".Util.Settings.SystemMonitor"
+            android:label="@string/set_monitor" />
+        <activity android:name=".OSL.OSL"
+            android:label="@string/open_source" />
+        <activity android:name=".OSL.OpenSource"
+            android:label="@string/open_source" />
+        <activity android:name=".OSL.Library"
+            android:label="@string/library" />
+        <activity android:name=".Changelog.Whatsnew"
+            android:label="@string/changelog" />
+        <activity android:name=".WallPaperPicker.WallPaperPicker"
+            android:label="Preview" />
+        <meta-data
+            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+            android:value="GlideModule" />
+        <meta-data
+            android:name="com.bumptech.glide.integration.volley.VolleyGlideModule"
+            android:value="GlideModule" />
+    </application>
+
+</manifest>

@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Zero Two Wallpaper</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="set_aa">Versi Aplikasi</string>
+    <string name="set_monitor">Monitor Sistem</string>
+    <string name="device">HP kamu: </string>
+    <string name="android">OS level: </string>
+    <string name="sdk">Versi SDK: </string>
+    <string name="app_version">Versi Aplikasi: </string>
+    <string name="ss_other">Lainnya</string>
+    <string name="build_host">Build Host: </string>
+    <string name="modem_version">Versi Firmware: </string>
+    <string name="device_board">Board Name: </string>
+    <string name="rom_type">ROM build type: </string>
+    <string name="bootloader">Versi Bootloader: </string>
+    <string name="hardware">Hardware: </string>
+    <string name="kernel">Versi Kernel: </string>
+
+    <string name="library">Daftar pustaka</string>
+    <string name="license_warning">Mohon untuk selalu diingat jika setiap library yang saya gunakan disini memiliki lisensi nya masing-masing (silahkan cek di githubnya aja langsung), dan kode sumber dari aplikasi ini pun memiliki lisensi, jadi tolong jika anda adalah seseorang yang doyan dengan apktool, reverse engineering, tolong ingat soal LISENSI. Satu lagi, semua gambar yang dimuat dalam koleksi saya yang ditampilkan pada aplikasi ini bukanlah milik saya atau ciptaan saya, maka dari itu saya tidak mengklaim apapun dari gambar-gambar tersebut.</string>
+    <string name="used_libs">Library yang saya gunakan dalam aplikasi ini adalah:\n\n</string>
+    <string name="osl_summary">Klik untuk melihat lisensi aplikasi ini</string>
+    <string name="lib_summary">Klik untuk melihat library apa saja yang digunakan didalam aplikasi ini</string>
+
+    <string name="system_summary">Klik untuk melihat informasi kilat mengenai smartphone yang kamu gunakan</string>
+
+    <string name="about_app">Tentang aplikasi</string>
+    <string name="about_dev">Mengenai si pengembang aplikasi ini</string>
+    <string name="about_zero_two">Tentang Zero Two</string>
+    <string name="bug_report">Lapor bug</string>
+    <string name="github_page">Github</string>
+    <string name="facebook_page">Facebook</string>
+    <string name="trivia">Trivia</string>
+    <string name="open_source">Lisensi sumber terbuka</string>
+    <string name="settings">Pengaturan</string>
+    <string name="about">Tentang</string>
+    <string name="supports">Media sosial dan dukungan</string>
+    <string name="saran">User Feedback</string>
+    <string name="bug_click">Klik untuk melaporkan bug</string>
+    <string name="saran_click">Klik untuk memberikan kritik, saran, dan masukkan mengenai aplikasi ini</string>
+
+    <string name="trivia_content">1. Aplikasi ini dibuat oleh fans Zero Two, sebuah karakter dalam anime Darling in the Franxx, oleh fans dan untuk fans. \n\n2. Aplikasi ini tidak untuk diperjualbelikan dengan cara apapun, bahkan saya saja enggan memasukkan aplikasi ini kedalam Google Playstore, meski banyak aplikasi dengan konsep serupa disana \n\n3. Zero Two is the best girl \n\n4. Aplikasi ini hanya bisa berjalan pada smartphone android dengan os level kitkat - oreo saja \n\n 5. Kalian boleh memodifikasi aplikasi ini sedemikian rupa sampai puyeng, brat brut brat brut error sana-sini (bagi yang gila dengan apktool dan semacamnya) namun untuk selalu DIINGAT bahwasanya ada lisensi sumber terbuka untuk setiap kode sumber dari setiap bagian di aplikasi ini dan setiap library yang saya gunakan ketika mengembangkan aplikasi ini, maka dari itu tolong jadilah modder apk yang pintar dan bijak. \n\n6. Tertarik untuk memberikan kontribusi terhadap perkembangan aplikasi ini?, silahkan langsung PM ke fanpage facebook saya. \n\n7. Aplikasi ini bukanlah aplikasi resmi dari anime yang bersangkutan, sekali lagi ini unofficial app dari fans Zero Two dan anime Darling in the Franxx. \n\n 8. Aplikasi ini adalah project kedua yang saya kembangkan, sesuai dengan kode nomor Zero Two \n\n 9. Apakah aplikasi ini akan terus diupdate, atau memuat gambar dari karakter lain dari anime Darling in the Franxx? lainnya saya tunggu antusiasme dan feedback dari kalian.
+    </string>
+
+    <string name="restart">Restart App</string>
+
+    <string name="contributors">Kontributor</string>
+    <string name="developer_name">Renaldy P</string>
+    <string name="developer">Pengembang Aplikasi, Frontend maniac</string>
+    <string name="cooperating_crew">Tukang ngomelin soal desain dan tampilan, Media Partner, Do the rest of backend things </string>
+    <string name="crew">Axel Dmitry</string>
+
+    <string name="download">Download</string>
+    <string name="downloading">Mendownload gambar.. sabar ya, darling?</string>
+    <string name="download_finish">Darling, downloadnya udah selesai ^^</string>
+    <string name="download_error">Darling, kayaknya ndak bisa donwload nih :(</string>
+
+    <string name="quick_apply">Hilangkan Iklan</string>
+    <string name="quick_apply_summary">Aktifkan jika kalian tidak terima dibilang jelek oleh aplikasi ini disaat awal membuka aplikasi :P</string>
+
+    <string name="changelog">Changelog</string>
+    <string name="changelog_summary">Klik untuk melihat apa saja yang baru pada aplikasi ini!</string>
+
+    <string name="action_settings">Pengaturan</string>
+    <string name="subtitle_content">Seorang lelaki dengan darah pantura, suka nonton anime meski nggak sering-sering amat, Laid-back geek, loves astrophotography. </string>
+    <string name="preference_category_s">Tema</string>
+    <string name="warning">Perhatian!</string>
+    <string name="theme_message">Kami telah mendeteksi jika smartphone anda menggunakan OS Android: </string>
+    <string name="theme_messages">Tema ini menggunakan alpha pada color hex nya, dimana untuk smartphone yang menjalankan OS Android dibawah versi Nougat / SDK 24, pasti akan mengalami force close ketika menerapkan tema yang mengandung alpha pada value color hex nya, maka dari itu, tema ini kami blokir.. gomenasai :( _/\_</string>
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/preference_category_s">
+        <ListPreference
+            android:title="@string/preference_category_s"
+            android:summary="Mengatur tema aplikasi"
+            android:key="theme"
+            android:entries="@array/themeArray"
+            android:entryValues="@array/themeValue" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/settings">
+        <SwitchPreference
+            android:title="@string/quick_apply"
+            android:summary="@string/quick_apply_summary"
+            android:key="applywp"
+            android:checked="false" />
+    </PreferenceCategory>
+
+        <PreferenceCategory
+            android:title="@string/ss_other">
+            <Preference
+                android:title="@string/changelog"
+                android:key="changelog" />
+        <Preference
+            android:title="@string/set_monitor"
+            android:key="monitor" />
+        <Preference
+            android:title="@string/set_aa"
+            android:key="ssav" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
