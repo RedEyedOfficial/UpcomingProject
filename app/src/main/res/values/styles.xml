@@ -51,6 +51,21 @@
         <item name="android:textColorTertiary">#ffffff</item>
         <item name="android:textStyle">italic</item>
         <item name="android:textColorAlertDialogListItem">#ed0adab4</item>
+        <item name="android:alertDialogTheme">@style/dialog_black</item>
+    </style>
+
+    <style name="dialog_black">
+        <item name="android:textColorAlertDialogListItem">#ed0adab4</item>
+        <item name="android:textColor">#ed0adab4</item>
+        <item name="android:textColorPrimary">#ed0adab4</item>
+        <item name="android:textColorSecondary">#ed0adab4</item>
+    </style>
+
+    <style name="dialog_black_akame">
+        <item name="android:textColor">#f6bc1c0a</item>
+        <item name="android:textColorPrimary">#f6bc1c0a</item>
+        <item name="android:textColorSecondary">#f6bc1c0a</item>
+        <item name="android:textColorAlertDialogListItem">#f6bc1c0a</item>
     </style>
 
     <style name="akame_theme">
@@ -63,6 +78,7 @@
         <item name="android:textColorSecondary">#f6bc1c0a</item>
         <item name="android:background">#f6000000</item>
         <item name="android:textStyle">italic</item>
+        <item name="android:alertDialogTheme">@style/dialog_black_akame</item>
         <item name="android:textColorAlertDialogListItem">#f6bc1c0a</item>
     </style>
 

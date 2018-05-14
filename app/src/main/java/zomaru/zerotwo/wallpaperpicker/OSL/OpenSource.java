@@ -58,17 +58,11 @@ public class OpenSource extends AppCompatActivity {
                 activity.setTheme(R.style.black_theme);
                 break;
             case 4:
-                if (Build.VERSION.SDK_INT < 24) {
-
-                } else {
-                    activity.setTheme(R.style.zero_two_theme);
-                } break;
+                activity.setTheme(R.style.zero_two_theme);
+                break;
             case 5:
-                if (Build.VERSION.SDK_INT < 24) {
-
-                } else {
-                    activity.setTheme(R.style.red_eyed_theme);
-                } break;
+                activity.setTheme(R.style.red_eyed_theme);
+                break;
         }
     }
 }

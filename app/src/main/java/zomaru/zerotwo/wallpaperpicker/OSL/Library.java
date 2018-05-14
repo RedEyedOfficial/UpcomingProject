@@ -29,7 +29,7 @@ public class Library extends AppCompatActivity {
         ButterKnife.bind(this);
         toolbar.setTitleTextColor(Color.WHITE);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        textView.setText(getApplicationContext().getResources().getString(R.string.used_libs) + "1. CircleImageView by hdodenhof" + System.lineSeparator() + "2. Butterknife by Jakewharton" + System.lineSeparator() + "3. Android Easing and Animations by daimajia" + System.lineSeparator() + "4. changeloglib by gabrielemariotti" + System.lineSeparator() + "5. Glide by bumptech" + System.lineSeparator() + "6. Okhttp3 by Square" + System.lineSeparator() + "7. TapTargetView by Keepsafe" + System.lineSeparator() + "8. Volley by Google" + System.lineSeparator() + "9. Android universal Image Loader by nostra13" + System.lineSeparator() + "10. Firebase, Firebase Database & Storage by Google");
+        textView.setText(getApplicationContext().getResources().getString(R.string.used_libs) + "1. CircleImageView by hdodenhof" + System.lineSeparator() + "2. Butterknife by Jakewharton" + System.lineSeparator() + "3. Android Easing and Animations by daimajia" + System.lineSeparator() + "4. changeloglib by gabrielemariotti" + System.lineSeparator() + "5. Glide by bumptech" + System.lineSeparator() + "6. Okhttp3 by Square" + System.lineSeparator() + "7. TapTargetView by Keepsafe" + System.lineSeparator() + "8. Volley by Google" + System.lineSeparator() + "9. Fast Android Networking" + System.lineSeparator() + "10. Firebase, Firebase Database & Storage by Google");
     }
 
     private void Themerize(Activity activity) {
@@ -45,17 +45,11 @@ public class Library extends AppCompatActivity {
                 activity.setTheme(R.style.black_theme);
                 break;
             case 4:
-                if (Build.VERSION.SDK_INT < 24) {
-
-                } else {
-                    activity.setTheme(R.style.zero_two_theme);
-                } break;
+                activity.setTheme(R.style.zero_two_theme);
+                break;
             case 5:
-                if (Build.VERSION.SDK_INT < 24) {
-
-                } else {
-                    activity.setTheme(R.style.red_eyed_theme);
-                } break;
+                activity.setTheme(R.style.red_eyed_theme);
+                break;
         }
     }
 }
