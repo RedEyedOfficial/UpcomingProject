@@ -20,9 +20,11 @@
 - Heavy
 
 
------ Listing -----
+----------
+
+# Bug History
 
 1. B-RTB/DRB-001-L-Kiki
 "Force closing pada device Oppo"
 "Force close saat mengklik bagian 'Tentang aplikasi' dan 'Monitor sistem' pada smartphone Oppo (running android OS Lolipop 5.1.1) dikarenakan kurangnya dukungan terhadap library Android Easing & Animation yang digunakan dalam aplikasi ini"
-To be announced
+Workaround: To be announced
