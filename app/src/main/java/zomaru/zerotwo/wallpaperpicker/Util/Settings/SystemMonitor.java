@@ -4,8 +4,6 @@ import android.app.Activity;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.AppBarLayout;
-import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
@@ -15,9 +13,11 @@ import com.daimajia.androidanimations.library.YoYo;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import zomaru.zerotwo.wallpaperpicker.Helper.Animator.TextViewAnimator;
 import zomaru.zerotwo.wallpaperpicker.R;
 
 public class SystemMonitor extends AppCompatActivity {
+    private TextView view;
     @BindView(R.id.tb_system)
     Toolbar toolbar;
     @BindView(R.id.isi_system)
@@ -60,13 +60,8 @@ public class SystemMonitor extends AppCompatActivity {
                 break;
         }
         textView.setText(getApplicationContext().getResources().getString(R.string.device) + Build.DEVICE + "" + "/" + Build.MODEL + System.lineSeparator() + getApplicationContext().getResources().getString(R.string.android) + oslevel + System.lineSeparator() + getApplicationContext().getResources().getString(R.string.sdk) + Build.VERSION.SDK_INT + System.lineSeparator() + getApplicationContext().getResources().getString(R.string.build_host) + Build.HOST + System.lineSeparator() + getApplicationContext().getResources().getString(R.string.modem_version) + Build.getRadioVersion() + System.lineSeparator() + getApplicationContext().getResources().getString(R.string.device_board) + Build.BOARD + System.lineSeparator() + getApplicationContext().getResources().getString(R.string.rom_type) + Build.TYPE + System.lineSeparator() + getApplicationContext().getResources().getString(R.string.bootloader) + Build.BOOTLOADER + System.lineSeparator() + getApplicationContext().getResources().getString(R.string.hardware) + Build.HARDWARE + System.lineSeparator() + getApplicationContext().getResources().getString(R.string.kernel) + System.getProperty("os.version"));
-        AnimateMe();
-    }
-
-    public void AnimateMe() {
-        YoYo.with(Techniques.Landing)
-                .duration(300)
-                .playOn(textView);
+        TextViewAnimator animator = new TextViewAnimator(view);
+        animator.setAnimation(textView);
     }
 
     private void Themerize(Activity activity) {
@@ -82,17 +77,11 @@ public class SystemMonitor extends AppCompatActivity {
                 activity.setTheme(R.style.black_theme);
                 break;
             case 4:
-                if (Build.VERSION.SDK_INT < 24) {
-
-                } else {
                     activity.setTheme(R.style.zero_two_theme);
-                } break;
+                 break;
             case 5:
-                if (Build.VERSION.SDK_INT < 24) {
-
-                } else {
-                    activity.setTheme(R.style.red_eyed_theme);
-                } break;
+                    activity.setTheme(R.style.akame_theme);
+                 break;
         }
     }
 }

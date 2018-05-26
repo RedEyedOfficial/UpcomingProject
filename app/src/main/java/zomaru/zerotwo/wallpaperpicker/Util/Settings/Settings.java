@@ -1,16 +1,12 @@
 package zomaru.zerotwo.wallpaperpicker.Util.Settings;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.HardwarePropertiesManager;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.SwitchPreference;
-import android.renderscript.Script;
 
 import zomaru.zerotwo.wallpaperpicker.BuildConfig;
 import zomaru.zerotwo.wallpaperpicker.Changelog.Whatsnew;
@@ -23,12 +19,18 @@ public class Settings extends PreferenceActivity {
     private final String AV = "ssav";
     private final String CHANGELOG = "changelog";
     private final String ZAP = "applywp";
+    private final String HITORI = "animate";
+    private final String SILENT = "silence";
     public static boolean quickEnabled;
+    public static boolean isAnimated;
+    public static boolean diam;
     private ListPreference themechooser;
     private Preference monitor;
     private Preference appver;
     private Preference changelog;
     private SwitchPreference quickapply;
+    private SwitchPreference animator;
+    private SwitchPreference silencer;
     private String oslevel;
     public static int THEMEVALUE;
 
@@ -65,14 +67,16 @@ public class Settings extends PreferenceActivity {
                         THEMEVALUE = 3;
                         break;
                     case 3:
-                        zerotwoApply();
-                        listPreference.setSummary("Tema saat ini adalah: " + listPreference.getEntries()[theme]);
-                        THEMEVALUE = 4;
+                            zerotwoApply();
+                            listPreference.setSummary("Tema saat ini adalah: " + listPreference.getEntries()[theme]);
+                            THEMEVALUE = 4;
+
                         break;
                     case 4:
-                        akameApply();
-                        listPreference.setSummary("Tema saat ini adalah: " + listPreference.getEntries()[theme]);
-                        THEMEVALUE = 5;
+                            akameApply();
+                            listPreference.setSummary("Tema saat ini adalah: " + listPreference.getEntries()[theme]);
+                            THEMEVALUE = 5;
+
                         break;
                 }
                 return true;
@@ -89,6 +93,35 @@ public class Settings extends PreferenceActivity {
                     quickEnabled = false;
                 } else {
                     quickEnabled = true;
+                }
+                return true;
+            }
+        });
+
+        animator = (SwitchPreference)findPreference(HITORI);
+        animator.setIcon(R.drawable.ic_play_animation);
+        animator.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+            @Override
+            public boolean onPreferenceChange(Preference preference, Object o) {
+                boolean animated = animator.isChecked();
+                if (animated) {
+                    isAnimated = false;
+                } else {
+                    isAnimated = true;
+                }
+                return true;
+            }
+        });
+        silencer = (SwitchPreference)findPreference(SILENT);
+        silencer.setIcon(R.drawable.ic_darling_mute);
+        silencer.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+            @Override
+            public boolean onPreferenceChange(Preference preference, Object o) {
+                boolean mute = silencer.isChecked();
+                if (mute) {
+                    diam = false;
+                } else {
+                    diam = true;
                 }
                 return true;
             }
