@@ -3,11 +3,9 @@ package zomaru.zerotwo.wallpaperpicker.AdsAway;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.os.Build;
-import android.os.Parcel;
 
-/**
- * Created by root on 5/11/18.
- */
+import zomaru.zerotwo.wallpaperpicker.Helper.BokuNoDarling;
+import zomaru.zerotwo.wallpaperpicker.Util.Settings.Settings;
 
 public class AdsAway {
     private static String tipehp;
@@ -20,8 +18,15 @@ public class AdsAway {
         alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "Shut Up!", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialogInterface, int which) {
                 alertDialog.cancel();
+                boolean receiver = Settings.diam;
+                if (receiver) {
+                } else {
+                    BokuNoDarling bokuNoDarling = new BokuNoDarling(activity);
+                    bokuNoDarling.setDarling(activity);
+                }
             }
         });
         alertDialog.show();
+
     }
 }

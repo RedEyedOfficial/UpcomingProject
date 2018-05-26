@@ -24,14 +24,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.getkeepsafe.taptargetview.TapTarget;
 import com.getkeepsafe.taptargetview.TapTargetView;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.stephentuso.welcome.WelcomeHelper;
 
 import java.util.concurrent.TimeUnit;
 
@@ -42,10 +40,13 @@ import zomaru.zerotwo.wallpaperpicker.AboutApp.AboutApp;
 import zomaru.zerotwo.wallpaperpicker.AboutZeroTwo.AboutHer;
 import zomaru.zerotwo.wallpaperpicker.AdsAway.AdsAway;
 import zomaru.zerotwo.wallpaperpicker.BugReport.BugReport;
+import zomaru.zerotwo.wallpaperpicker.Extra.Extra;
 import zomaru.zerotwo.wallpaperpicker.OSL.OSL;
+import zomaru.zerotwo.wallpaperpicker.Splasher.Splashin;
 import zomaru.zerotwo.wallpaperpicker.Trivia.Trivia;
 import zomaru.zerotwo.wallpaperpicker.Util.Settings.Settings;
 import zomaru.zerotwo.wallpaperpicker.WallPaperPicker.Image;
+import zomaru.zerotwo.wallpaperpicker.WallPaperPicker.Picker;
 import zomaru.zerotwo.wallpaperpicker.WallPaperPicker.WallPaperPicker;
 
 public class MainActivity extends AppCompatActivity
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity
     private String TAG = MainActivity.class.getSimpleName();
     private WallPaperPickerAdapter adapter;
     private boolean quickReceiver;
+    private WelcomeHelper wh;
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -68,11 +70,12 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        wh = new WelcomeHelper(this, Splashin.class);
+        wh.show(savedInstanceState);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(this).build();
-        ImageLoader.getInstance().init(config);
+
 
         setSupportActionBar(toolbar);
 
@@ -122,6 +125,13 @@ public class MainActivity extends AppCompatActivity
         } else {
             AdsAway.AdsFetcher(this);
         }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        wh.onSaveInstanceState(outState);
+        // splash screen hanya sekali saja
     }
 
     @Override
@@ -192,6 +202,10 @@ public class MainActivity extends AppCompatActivity
             startActivity(new Intent(MainActivity.this, Trivia.class));
         } else if (id == R.id.settings) {
             startActivity(new Intent(MainActivity.this, Settings.class));
+        } else if (id == R.id.wallpaperpicker) {
+            startActivity(new Intent(MainActivity.this, Picker.class));
+        } else if (id == R.id.extra) {
+            startActivity(new Intent(MainActivity.this, Extra.class));
         } else if (id == R.id.bug_report) {
             startActivity(new Intent(MainActivity.this, BugReport.class));
         } else if (id == R.id.github) {
@@ -259,6 +273,7 @@ public class MainActivity extends AppCompatActivity
                         Intent intent = new Intent(context, WallPaperPicker.class);
                         intent.putExtra(WallPaperPicker.ZERO_TWO_IS_THE_BEST_GIRL, image);
                         startActivity(intent);
+
                 }
             }
         }
