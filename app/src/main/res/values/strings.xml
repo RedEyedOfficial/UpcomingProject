@@ -20,12 +20,16 @@
     <string name="kernel">Versi Kernel: </string>
 
     <string name="library">Daftar pustaka</string>
-    <string name="license_warning">Mohon untuk selalu diingat jika setiap library yang saya gunakan disini memiliki lisensi nya masing-masing (silahkan cek di githubnya aja langsung), dan kode sumber dari aplikasi ini pun memiliki lisensi, jadi tolong jika anda adalah seseorang yang doyan dengan apktool, reverse engineering, tolong ingat soal LISENSI. Satu lagi, semua gambar yang dimuat dalam koleksi saya yang ditampilkan pada aplikasi ini bukanlah milik saya atau ciptaan saya, maka dari itu saya tidak mengklaim apapun dari gambar-gambar tersebut.</string>
+    <string name="license_warning">Mohon untuk selalu diingat jika setiap library yang saya gunakan disini memiliki lisensi nya masing-masing (silahkan cek di githubnya aja langsung), dan kode sumber dari aplikasi ini pun memiliki lisensi, jadi tolong jika anda adalah seseorang yang doyan dengan apktool, reverse engineering, tolong ingat soal lisensi tersebut. Satu lagi, semua gambar yang dimuat dalam koleksi saya yang ditampilkan pada aplikasi ini bukanlah milik saya atau ciptaan saya, maka dari itu saya tidak mengklaim apapun dari gambar-gambar tersebut.</string>
     <string name="used_libs">Library yang saya gunakan dalam aplikasi ini adalah:\n\n</string>
     <string name="osl_summary">Klik untuk melihat lisensi aplikasi ini</string>
     <string name="lib_summary">Klik untuk melihat library apa saja yang digunakan didalam aplikasi ini</string>
 
     <string name="system_summary">Klik untuk melihat informasi kilat mengenai smartphone yang kamu gunakan</string>
+
+    <string name="welcome">Selamat Datang ^^</string>
+    <string name="understand">Wakarimashita!</string>
+    <string name="splash_desc">Selamat datang di aplikasi online gallery app simple milik kami, Zero Two Wallpaper ^^</string>
 
     <string name="about_app">Tentang aplikasi</string>
     <string name="about_dev">Mengenai si pengembang aplikasi ini</string>
@@ -36,21 +40,44 @@
     <string name="trivia">Trivia</string>
     <string name="open_source">Lisensi sumber terbuka</string>
     <string name="settings">Pengaturan</string>
-    <string name="about">Tentang</string>
+    <string name="about">Dashboard</string>
     <string name="supports">Media sosial dan dukungan</string>
     <string name="saran">User Feedback</string>
     <string name="bug_click">Klik untuk melaporkan bug</string>
     <string name="saran_click">Klik untuk memberikan kritik, saran, dan masukkan mengenai aplikasi ini</string>
 
-    <string name="trivia_content">1. Aplikasi ini dibuat oleh fans Zero Two, sebuah karakter dalam anime Darling in the Franxx, oleh fans dan untuk fans. \n\n2. Aplikasi ini tidak untuk diperjualbelikan dengan cara apapun, bahkan saya saja enggan memasukkan aplikasi ini kedalam Google Playstore, meski banyak aplikasi dengan konsep serupa disana \n\n3. Zero Two is the best girl \n\n4. Aplikasi ini hanya bisa berjalan pada smartphone android dengan os level kitkat - oreo saja \n\n 5. Kalian boleh memodifikasi aplikasi ini sedemikian rupa sampai puyeng, brat brut brat brut error sana-sini (bagi yang gila dengan apktool dan semacamnya) namun untuk selalu DIINGAT bahwasanya ada lisensi sumber terbuka untuk setiap kode sumber dari setiap bagian di aplikasi ini dan setiap library yang saya gunakan ketika mengembangkan aplikasi ini, maka dari itu tolong jadilah modder apk yang pintar dan bijak. \n\n6. Tertarik untuk memberikan kontribusi terhadap perkembangan aplikasi ini?, silahkan langsung PM ke fanpage facebook saya. \n\n7. Aplikasi ini bukanlah aplikasi resmi dari anime yang bersangkutan, sekali lagi ini unofficial app dari fans Zero Two dan anime Darling in the Franxx. \n\n 8. Aplikasi ini adalah project kedua yang saya kembangkan, sesuai dengan kode nomor Zero Two \n\n 9. Apakah aplikasi ini akan terus diupdate, atau memuat gambar dari karakter lain dari anime Darling in the Franxx? lainnya saya tunggu antusiasme dan feedback dari kalian.
+    <string name="no_welcome_sound">Matikan sambutan</string>
+    <string name="no_welcome_summary">Kamu tidak akan mendengar lagi suara darlingmu ketika ini dihidupkan</string>
+
+    <string name="trivia_content">1. Aplikasi ini dibuat oleh fans Zero Two, sebuah karakter dalam anime Darling in the Franxx, oleh fans dan untuk fans. \n\n2. Aplikasi ini tidak untuk diperjualbelikan dengan cara apapun, bahkan saya saja enggan memasukkan aplikasi ini kedalam Google Playstore, meski banyak aplikasi dengan konsep serupa disana \n\n3. Zero Two is the best girl \n\n4. Aplikasi ini hanya bisa berjalan pada smartphone android dengan os level kitkat - oreo saja \n\n 5. Modders of apks are welcome, tapi tolong baca bagian lisensi sumber terbuka, show your respect and empathy for us, even a little. \n\n6. Tertarik untuk memberikan kontribusi terhadap perkembangan aplikasi ini?, silahkan langsung PM ke fanpage facebook saya. \n\n7. Aplikasi ini bukanlah aplikasi resmi dari anime yang bersangkutan, sekali lagi ini unofficial app dari fans Zero Two dan anime Darling in the Franxx. \n\n 8. Aplikasi ini adalah project kedua yang saya kembangkan, sesuai dengan kode nomor Zero Two \n\n 9. Apakah aplikasi ini akan terus diupdate, atau memuat gambar dari karakter lain dari anime Darling in the Franxx? lainnya saya tunggu antusiasme dan feedback dari kalian.
     </string>
 
+    <string name="extra_story">Fan made story</string>
+    <string name="extra_story_summary">Klik untuk membaca one-shot fan made story mengenai anime ini</string>
+
+    <string name="snackbar">Tekan tombol galeri untuk mengubah wallpaper</string>
+    <string name="wallpaperpicker">Ubah wallpaper</string>
+
     <string name="restart">Restart App</string>
+    <string name="content_alone_title">Moshi-mosh..</string>
+    <string name="content_alone_message">Aktifkan animasi?? (Jangan nangis lho ya !)</string>
+    <string name="yes">Yups!</string>
+    <string name="no">nggak ah</string>
+    <string name="content_alone">Animasi spesial</string>
+    <string name="content_alone_summary">Aktifkan animasi spesial disaat membaca lirik lagu hitori</string>
+
+    <string name="extra">Extra</string>
+    <string name="song_lyric">Lirik lagu</string>
+    <string name="song_ost">OST</string>
+    <string name="song_click">Klik untuk melihat liriknya, gan!</string>
+    <string name="song_lyric_summary">Klik untuk melihat kumpulan lirik berbagai lagu dari anime DitF ini</string>
+    <string name="song_opening">Opening</string>
+    <string name="song_ending">Ending</string>
 
     <string name="contributors">Kontributor</string>
     <string name="developer_name">Renaldy P</string>
-    <string name="developer">Pengembang Aplikasi, Frontend maniac</string>
-    <string name="cooperating_crew">Tukang ngomelin soal desain dan tampilan, Media Partner, Do the rest of backend things </string>
+    <string name="developer">Pengembang Aplikasi, Desain UI. \n\n Ngefans banget ama Zero Two, hingga akhirnya memutuskan utuk mengembangkan aplikasi ini demi mengekspresikan perasaannya kepada Eo To yang tidak tersampaikan tersebut :v . Sangat menyukai Astrofotografi</string>
+    <string name="cooperating_crew">Tester, Taking care of backend things. \n\n Seorang pemuda yang bekerja sebagai teknisi engineering yang diculik oleh si pengembang cuma buat dijadiin kelinci percobaan alias tester tak dibayar buat uji coba dan debugging project ini, sekaligus disuruh ngiklanin :( .  </string>
     <string name="crew">Axel Dmitry</string>
 
     <string name="download">Download</string>

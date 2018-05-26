@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceScreen
+        android:title="@string/song_lyric"
+        android:summary="@string/song_lyric_summary"
+        android:key="extra_song">
+
+        <PreferenceScreen
+            android:title="@string/song_opening"
+            android:key="opening">
+            <Preference
+                android:key="kiss" />
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:title="@string/song_ending"
+            android:key="ending">
+            <Preference
+                android:key="torikago" />
+            <Preference
+                android:key="manatsu" />
+            <Preference
+                android:key="beautiful" />
+            <Preference
+                android:key="hitori" />
+            <Preference
+                android:key="escape" />
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:title="@string/song_ost"
+            android:key="ost">
+            <Preference
+                android:key="vanquish" />
+        </PreferenceScreen>
+
+    </PreferenceScreen>
+    <Preference
+        android:title="@string/extra_story"
+        android:summary="@string/extra_story_summary"
+        android:key="fanmadestory" />
+
+</PreferenceScreen>

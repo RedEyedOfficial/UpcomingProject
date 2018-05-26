@@ -17,6 +17,16 @@
             android:summary="@string/quick_apply_summary"
             android:key="applywp"
             android:checked="false" />
+        <SwitchPreference
+            android:title="@string/content_alone"
+            android:summary="@string/content_alone_summary"
+            android:key="animate"
+            android:checked="false" />
+        <SwitchPreference
+            android:title="@string/no_welcome_sound"
+            android:summary="@string/no_welcome_summary"
+            android:key="silence"
+            android:checked="false" />
     </PreferenceCategory>
 
         <PreferenceCategory

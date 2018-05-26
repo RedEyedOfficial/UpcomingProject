@@ -1,51 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:fitsSystemWindows="true">
 
-    <TextView
-        android:layout_width="150dp"
+    <android.support.v7.widget.CardView android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:id="@+id/contributors"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal"
-        android:textSize="20dp"
-        android:layout_marginTop="10dp"
-        />
+        android:id="@+id/aacv"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center_horizontal">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/developer_avatar"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/contributors"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:textSize="20sp"
+                android:textAlignment="center"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
 
-    </de.hdodenhof.circleimageview.CircleImageView>
-
-    <TextView
-        android:id="@+id/dev_name"
-        android:layout_width="match_parent"
+    <android.support.v7.widget.CardView android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal"
-        android:textSize="20dp"
-        android:layout_marginTop="10dp"/>
+        android:id="@+id/aacvz"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal">
 
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:id="@+id/crew_avatar"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"/>
-    <TextView
-        android:layout_width="match_parent"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/developer_avatar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+            <TextView
+                android:id="@+id/dev_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                android:layout_below="@id/developer_avatar"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/dev_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                android:layout_below="@id/dev_name"
+                android:layout_marginTop="7dp"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:id="@+id/crew_name"
-        android:layout_marginTop="10dp"
-        android:textSize="20dp"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal"/>
+        android:id="@+id/aacvx"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/crew_avatar"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:layout_below="@id/crew_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/crew_name"
+                android:textSize="20sp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"/>
+            <TextView
+                android:id="@+id/crew_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                android:layout_below="@id/crew_name"
+                android:layout_marginTop="7dp"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
 
 </LinearLayout>

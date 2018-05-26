@@ -8,4 +8,9 @@
     <color name="red">#d50000</color>
     <color name="white">#ffffff</color>
     <color name="gray">#2c2d2b</color>
+    <color name="default_accent">#f743df84</color>
+    <color name="cyan">#ed0adab4</color>
+    <color name="akame_accent">#f6bc1c0a</color>
+    <color name="hiro">#1e88e5</color>
+    <color name="zerotwo">#f44336</color>
 </resources>

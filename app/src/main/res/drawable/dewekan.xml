@@ -1,0 +1,45 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/page_one"
+        android:duration="5000" />
+
+    <item
+        android:drawable="@drawable/page_two"
+        android:duration="6500" />
+
+    <item
+        android:drawable="@drawable/page_three"
+        android:duration="6500" />
+
+    <item
+        android:drawable="@drawable/page_four"
+        android:duration="6500" />
+
+
+    <item
+        android:drawable="@drawable/page_five"
+        android:duration="6500" />
+
+    <item
+        android:drawable="@drawable/page_six"
+        android:duration="6500" />
+
+    <item
+        android:drawable="@drawable/page_seven"
+        android:duration="6500" />
+
+    <item
+        android:drawable="@drawable/page_eight"
+        android:duration="6500" />
+
+    <item
+        android:drawable="@drawable/page_nine"
+        android:duration="6500" />
+
+    <item
+        android:drawable="@drawable/page_ten"
+        android:duration="6500" />
+
+
+
+</animation-list>

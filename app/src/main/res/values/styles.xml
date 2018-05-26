@@ -3,9 +3,65 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">#2c2d2b</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorAccent">@color/default_accent</item>
+    </style>
+
+    <style name="nav_view_zero">
+        <item name="android:background">#2c2d2b</item>
+    </style>
+
+    <style name="kiss_header_background">
+        <item name="android:background">#42a5f5</item>
+    </style>
+
+    <style name="torikago_header">
+        <item name="android:background">#42a5f5</item>
+    </style>
+
+    <style name="midsummer">
+        <item name="android:background">#00e676</item>
+    </style>
+
+    <style name="beautiful">
+        <item name="android:background">#c0ca33</item>
+    </style>
+
+    <style name="kiss_linear">
+        <item name="android:background">#d50000</item>
+        <item name="colorPrimary">#2c2d2b</item>
+        <item name="colorPrimaryDark">#000000</item>
+    </style>
+
+    <style name="kiss_title">
+        <item name="android:background">#2c2d2b</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+    </style>
+
+    <style name="strelizia">
+        <item name="android:background">#d84315</item>
+    </style>
+
+    <style name="wallpaperpicker">
+        <item name="colorPrimary">#2c2d2b</item>
+        <item name="colorPrimaryDark">#1e88e5</item>
+        <item name="colorAccent">#f44336</item>
+        <item name="android:background">#2c2d2b</item>
+    </style>
+
+    <style name="vanquish">
+        <item name="android:background">#ffffff</item>
+        <item name="android:textColor">#d50000</item>
+    </style>
+
+    <style name="hitori">
+        <item name="android:background">#1a237e</item>
+    </style>
+
+    <style name="escape">
+        <item name="android:background">#f06292</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -30,6 +86,8 @@
         <item name="android:background">#2c2b2b</item>
         <item name="android:textStyle">italic</item>
         <item name="android:textColorAlertDialogListItem">#ffffff</item>
+        <item name="colorAccent">@color/white</item>
+
     </style>
 
     <style name="zero_two_theme">
@@ -41,6 +99,7 @@
         <item name="android:background">#f21d8555</item>
         <item name="android:textStyle">italic</item>
         <item name="android:textColorAlertDialogListItem">#dff4877a</item>
+        <item name="colorAccent">@color/colorAccent</item>
     </style>
 
     <style name="black_theme">
@@ -52,6 +111,7 @@
         <item name="android:textStyle">italic</item>
         <item name="android:textColorAlertDialogListItem">#ed0adab4</item>
         <item name="android:alertDialogTheme">@style/dialog_black</item>
+        <item name="colorAccent">@color/cyan</item>
     </style>
 
     <style name="dialog_black">
@@ -80,50 +140,7 @@
         <item name="android:textStyle">italic</item>
         <item name="android:alertDialogTheme">@style/dialog_black_akame</item>
         <item name="android:textColorAlertDialogListItem">#f6bc1c0a</item>
-    </style>
-
-    <style name="red_eyed_theme">
-        <item name="android:colorBackground">#000000</item>
-        <item name="android:listDivider">@color/black</item>
-        <item name="android:dividerHeight">1dp</item>
-        <item name="android:horizontalDivider">@color/black</item>
-        <item name="android:textColor">#b71c1c</item>
-        <item name="android:textColorPrimary">#b71c1c</item>
-        <item name="android:textColorSecondary">#b71c1c</item>
-        <item name="android:background">#000000</item>
-        <item name="android:textStyle">italic</item>
-        <item name="android:textColorAlertDialogListItem">#b71c1c</item>
-    </style>
-
-    <style name="zero_two_theme_substitute">
-        <item name="android:colorBackground">#f21d8555</item>
-        <item name="android:listDivider">@color/black</item>
-        <item name="android:dividerHeight">1dp</item>
-        <item name="android:horizontalDivider">@color/black</item>
-        <item name="android:textColor">#dff4877a</item>
-        <item name="android:textColorPrimary">#dff4877a</item>
-        <item name="android:textColorSecondary">#dff4877a</item>
-        <item name="android:background">#f21d8555</item>
-        <item name="android:textStyle">italic</item>
-        <item name="android:textColorAlertDialogListItem">#f6bc1c0a</item>
-    </style>
-
-    <style name="black_theme_lm">
-        <item name="android:textColor">#66ffff</item>
-        <item name="android:textColorPrimary">#66ffff</item>
-        <item name="android:textColorSecondary">#66ffff</item>
-        <item name="android:background">#000000</item>
-        <item name="android:textColorTertiary">#66ffff</item>
-        <item name="android:alertDialogTheme">@style/DialogStyle</item>
-        <item name="android:textStyle">italic</item>
-        <item name="android:textColorAlertDialogListItem">#66ffff</item>
-    </style>
-
-    <style name="DialogStyle">
-        <item name="android:textColor">#66ffff</item>
-        <item name="android:textColorPrimary">#66ffff</item>
-        <item name="android:textColorSecondary">#66ffff</item>
-        <item name="android:textColorAlertDialogListItem">#66ffff</item>
+        <item name="colorAccent">@color/akame_accent</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />

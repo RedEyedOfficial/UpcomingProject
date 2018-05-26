@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog bulletedList="true">
 
+    <changelogversion versionName="1.0.2" changeDate="Mei 8,2018">
+        <changelogtext>[b]App update[b]</changelogtext>
+        <changelogtext>Zero Two Wallpaper</changelogtext>
+        <changelogtext>Versi 1.0.2</changelogtext>
+        <changelogtext>[b] Apa saja yang baru?[b]</changelogtext>
+        <changelogtext>Pengubahan tema halaman utama aplikasi</changelogtext>
+        <changelogtext>Fitur baru: Extra</changelogtext>
+        <changelogtext>Kini bisa menerapkan atau mengganti wallpaper langsung dari aplikasi ini</changelogtext>
+        <changelogtext>Welcome sound from our beloved dino girl</changelogtext>
+        <changelogtext>Penambahan katalog wallpaper pada database</changelogtext>
+        <changelogtext>UI rework pada bagian tentang aplikasi</changelogtext>
+        <changelogtext>Menerapkan tema independen pada beberapa bagian aplikasi </changelogtext>
+        <changelogtext>All new splashscreen</changelogtext>
+        <changelogtext>Membuang dan mengganti beberapa library yang digunakan</changelogtext>
+        <changelogtext>Bug fixes</changelogtext>
+        <changelogtext>Code cleanup</changelogtext>
+    </changelogversion>
+
     <changelogversion versionName="1.0" changeDate="Mei 8,2018">
         <changelogtext>[b]Rilis perdana[b]</changelogtext>
         <changelogtext>Zero Two Wallpaper</changelogtext>

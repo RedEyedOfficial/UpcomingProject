@@ -23,6 +23,16 @@
             android:icon="@drawable/ic_menu_manage"
             android:title="@string/settings"
             android:iconTint="@color/tint"/>
+                <item
+                    android:id="@+id/extra"
+                    android:icon="@drawable/ic_extra"
+                    android:title="@string/extra"
+                    android:iconTint="@color/tint" />
+                <item
+                    android:id="@+id/wallpaperpicker"
+                    android:icon="@drawable/ic_image"
+                    android:title="@string/wallpaperpicker"
+                    android:iconTint="@color/tint" />
         </menu>
         </item>
     </group>

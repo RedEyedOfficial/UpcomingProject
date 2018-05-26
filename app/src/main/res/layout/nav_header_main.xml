@@ -17,6 +17,7 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:background="@android:color/transparent"
         android:layout_marginStart="0dp"
         app:srcCompat="@drawable/z2light" />
 
