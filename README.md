@@ -1,7 +1,7 @@
 # Zero Two Wallpaper
 An open source online gallery app which displays my private collection of Zero Two <3
 
-- uses various library such as Glide, Butterknife, Fast Android Networking, etc
+- uses various library such as Glide, Butterknife, etc
 - also uses Firebase Database & Storage
 - this app is for devices that runs on android kitkat (SDK 19) up to android oreo (SDK26)
 - Please NOTE that i do not claim any rights for the images on the catalog of my collection which displayed here as mine, those images rights were hold by each images' artists.
