@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
@@ -71,7 +70,7 @@ public class BugReport extends PreferenceActivity {
                 activity.setTheme(R.style.zero_two_theme);
                 break;
             case 5:
-                activity.setTheme(R.style.red_eyed_theme);
+                activity.setTheme(R.style.akame_theme);
                 break;
         }
     }

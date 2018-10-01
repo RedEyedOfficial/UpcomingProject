@@ -34,7 +34,7 @@ public class Whatsnew extends AppCompatActivity {
                 activity.setTheme(R.style.zero_two_theme);
                 break;
             case 5:
-                activity.setTheme(R.style.red_eyed_theme);
+                activity.setTheme(R.style.akame_theme);
                 break;
         }
     }

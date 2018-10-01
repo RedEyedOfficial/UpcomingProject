@@ -64,7 +64,6 @@ public class AboutHer extends AppCompatActivity implements SwipeRefreshLayout.On
             webView.goBack();
         } else {
             finish();
-            System.exit(0);
         }
     }
 }

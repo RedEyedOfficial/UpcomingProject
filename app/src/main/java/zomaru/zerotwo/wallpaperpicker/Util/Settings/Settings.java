@@ -1,5 +1,7 @@
 package zomaru.zerotwo.wallpaperpicker.Util.Settings;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -7,9 +9,13 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.SwitchPreference;
+import android.support.design.widget.Snackbar;
+import android.widget.Toast;
 
 import zomaru.zerotwo.wallpaperpicker.BuildConfig;
 import zomaru.zerotwo.wallpaperpicker.Changelog.Whatsnew;
+import zomaru.zerotwo.wallpaperpicker.EasterEgg.Exceptions.BestGirlException;
+import zomaru.zerotwo.wallpaperpicker.EasterEgg.Exceptions.BestGirlThrowble;
 import zomaru.zerotwo.wallpaperpicker.R;
 
 public class Settings extends PreferenceActivity {
@@ -21,6 +27,7 @@ public class Settings extends PreferenceActivity {
     private final String ZAP = "applywp";
     private final String HITORI = "animate";
     private final String SILENT = "silence";
+    private boolean dor;
     public static boolean quickEnabled;
     public static boolean isAnimated;
     public static boolean diam;
@@ -176,6 +183,31 @@ public class Settings extends PreferenceActivity {
 
         appver = (Preference)findPreference(AV);
         appver.setSummary(BuildConfig.VERSION_NAME);
+        appver.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                final android.support.v7.app.AlertDialog ad = new android.support.v7.app.AlertDialog.Builder(Settings.this).create();
+                ad.setTitle("Yoho!");
+                ad.setMessage("Zero Two is the best girl, right?");
+                ad.setCancelable(false);
+                ad.setButton(DialogInterface.BUTTON_POSITIVE, "Ya", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Toast t = Toast.makeText(Settings.this, "Arigatou, darling ^^", Toast.LENGTH_LONG);
+                        t.show();
+                    }
+                });
+                ad.setButton(DialogInterface.BUTTON_NEGATIVE, "NO!", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dor = true;
+                        EoTo();
+                    }
+                });
+                ad.show();
+                return true;
+            }
+        });
     }
 
     public void lightApply() {
@@ -196,6 +228,12 @@ public class Settings extends PreferenceActivity {
 
     public void zerotwoApply () {
         Themer.setTheme(this, Themer.ZERO_TWO_THEME);
+    }
+
+    public void EoTo() {
+        if (dor = true) {
+            throw new BestGirlException("Zero Two is the best girl !1!1!1", new BestGirlThrowble(getApplicationContext().getResources().getString(R.string.message_cause)));
+        }
     }
 
 }
