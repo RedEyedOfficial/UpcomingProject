@@ -15,6 +15,9 @@ An open source online gallery app which displays my private collection of Zero T
 # Darling in the Franxx icon
 © 2018 Darling in the Franxx
 
+# DEPRECATION
+this application is no longer receiving updates or maintenance.
+
 
 # Zero Two is the best girl, she is alive and truly lovable !!!
 
