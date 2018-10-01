@@ -21,11 +21,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import zomaru.zerotwo.wallpaperpicker.R;
 
-/**
- * Created by root on 5/23/18.
- */
-
 public class Picker extends AppCompatActivity {
+
     private final String link = "https://i.pinimg.com/originals/a3/62/af/a362af9fa250ba044cf11785f75fa899.jpg";
     private Context context;
     private int permissionGiven;

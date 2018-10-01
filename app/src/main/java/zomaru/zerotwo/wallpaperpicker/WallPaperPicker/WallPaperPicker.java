@@ -2,45 +2,25 @@ package zomaru.zerotwo.wallpaperpicker.WallPaperPicker;
 
 import android.app.DownloadManager;
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.graphics.Point;
-import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.androidnetworking.AndroidNetworking;
-import com.androidnetworking.common.Priority;
-import com.androidnetworking.error.ANError;
-import com.androidnetworking.interceptors.HttpLoggingInterceptor;
-import com.androidnetworking.interfaces.DownloadListener;
-import com.androidnetworking.interfaces.DownloadProgressListener;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.nostra13.universalimageloader.utils.StorageUtils;
 
-import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import okhttp3.OkHttpClient;
 import zomaru.zerotwo.wallpaperpicker.R;
 
 /**
@@ -49,7 +29,6 @@ import zomaru.zerotwo.wallpaperpicker.R;
 
 public class WallPaperPicker extends AppCompatActivity {
     public static final String ZERO_TWO_IS_THE_BEST_GIRL = "WallPaperPicker.ZERO_TWO";
-    private static final String DIREKTORI = "/ZeroTwoWallpaper/";
     private Context context;
 
     @BindView(R.id.image_wp)
@@ -71,19 +50,13 @@ public class WallPaperPicker extends AppCompatActivity {
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.preview_menu, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
         if (id == R.id.save_image) {
                 donwloadThis();
             Toast toast = Toast.makeText(context, "Gambar akan disimpan di penyimpanan internal pada folder pictures ya darling?", Toast.LENGTH_LONG);
